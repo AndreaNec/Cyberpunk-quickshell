@@ -97,6 +97,11 @@ Scope {
                 } else if (e.key === Qt.Key_D) {
                     // Increase volume action
                     Medias.active ? Medias.changeVolume(Medias.active, 0.01) : null;
+
+                    e.accepted = true;
+                } else if (e.key === Qt.Key_Return) {
+                    Medias.active?.togglePlaying();
+
                     e.accepted = true;
                 }
             }
