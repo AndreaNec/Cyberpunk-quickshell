@@ -44,3 +44,7 @@ refactoring of a lot of the values (like widths and heights) from hardcoded to v
 adding features (rn Idk which, probably some bar widgets)
 
 ---
+
+## Raccomended bindings for hyprland
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("qs ipc call launcher toggle"))
+hl.bind("SUPER + M", hl.dsp.exec_cmd("qs ipc call mediapanel toggle"))
