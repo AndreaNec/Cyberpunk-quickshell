@@ -47,7 +47,7 @@ Scope {
 
     PanelWindow {
         id: win
-        visible: root.shown
+        visible: root.shown || fx.visible
         color: "transparent"
 
         exclusionMode: ExclusionMode.Ignore
