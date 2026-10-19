@@ -9,26 +9,26 @@ This project aims to make a quickshell inspired to cyberpunk 2077 cybrdeck
 
 ## features until now
 
-working app menu
-working wifi sub menu
-working bt sub menu
-working media player display
-ram that shows workspaces
+working app menu  
+working wifi sub menu  
+working bt sub menu  
+working media player display  
+ram that shows workspaces  
 
 ---
 
 ## project structure
 
-./Singletons, contains all the services and variables that only need one instance shared between the whole file
-./launcher, contains all the launcher related stuff
-./mediaplayer, contains all the mediaplayer related stuff
-./stats, contains all the components for the ram overlay
-./:
-Theme.qml is a singleton that contains the theme colors and global sizes for cohesion
-CybrShape.qml is a component used to recreate the classic cyberpunk shape, to be used instead of rectangles
-GlitchReveal.qml is a wrapper that applies the glitch effect for when things pop up on the screen
-Bar.qml contains the bar that reserve the space for itself (rn is empty)
-shell.qml "spawns" all the other components
+./Singletons, contains all the services and variables that only need one instance shared between the whole file  
+./launcher, contains all the launcher related stuff  
+./mediaplayer, contains all the mediaplayer related stuff  
+./stats, contains all the components for the ram overlay  
+./:  
+ Theme.qml is a singleton that contains the theme colors and global sizes for cohesion  
+ CybrShape.qml is a component used to recreate the classic cyberpunk shape, to be used instead of rectangles  
+ GlitchReveal.qml is a wrapper that applies the glitch effect for when things pop up on the screen  
+ Bar.qml contains the bar that reserve the space for itself (rn is empty)  
+ shell.qml "spawns" all the other components  
 
 ## Start the project
 
@@ -47,14 +47,14 @@ the lsp by default doesn't work you have to create a .qmlls.ini file in this fol
 
 ### To do
 
-refactoring into smaller components especialy mediaplayer
-refactoring of a lot of the values (like widths and heights) from hardcoded to variables in singletons or in the roots
-adding features (rn Idk which, probably some bar widgets)\n
-exemples was for when I was laerning
+refactoring into smaller components especialy mediaplayer  
+refactoring of a lot of the values (like widths and heights) from hardcoded to variables in singletons or in the roots  
+adding features (rn Idk which, probably some bar widgets)  
+exemples was for when I was laerning  
 
 ---
 
 ## Raccomended bindings for hyprland
 
-hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("qs ipc call launcher toggle"))
-hl.bind("SUPER + M", hl.dsp.exec_cmd("qs ipc call mediapanel toggle"))
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("qs ipc call launcher toggle"))  
+hl.bind("SUPER + M", hl.dsp.exec_cmd("qs ipc call mediapanel toggle"))  
