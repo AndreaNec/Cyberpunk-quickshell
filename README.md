@@ -5,6 +5,12 @@
 
 This project aims to make a quickshell inspired to cyberpunk 2077 cybrdeck
 
+### Top Bar
+
+![bar screenshot](./images/desktop-bar.png)
+![menu screenshot](./images/menu.png)
+![radioport screenshot](./images/radioport.png)
+
 ---
 
 ## features until now
