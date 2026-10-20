@@ -26,7 +26,7 @@ working wifi sub menu
 working bt sub menu  
 working media player display  
 ram that shows workspaces  
-
+working volume OSD  
 ---
 
 ## project structure
