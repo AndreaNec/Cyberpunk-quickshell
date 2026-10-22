@@ -1,5 +1,6 @@
 import QtQuick
 import Quickshell.Services.Notifications
+import "../Singletons"
 
 QtObject {
     id: notificationData
