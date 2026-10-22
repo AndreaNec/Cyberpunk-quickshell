@@ -106,7 +106,7 @@ Scope {
                             Image {
                                 anchors.fill: parent
                                 anchors.margins: 5
-                                source: "../images/icons/NcIndustries.png"
+                                source: "../images/icons/Protocol3.png"
                             }
                         }
                     }

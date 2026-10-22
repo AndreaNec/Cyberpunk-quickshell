@@ -9,6 +9,8 @@ PanelWindow {
     exclusionMode: ExclusionMode.Ignore
     WlrLayershell.layer: WlrLayer.Top
 
+    mask: Region {}
+
     anchors {
         top: true
         left: true

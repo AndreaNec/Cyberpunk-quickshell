@@ -25,9 +25,9 @@ Scope {
 
     function push() {
         if (!Bluetooth.online) {
-            osd.show("󰤭", "BLUETOOTH // OFFLINE", 0, false);
+            osd.show("󰂲", "BLUETOOTH // OFFLINE", 0, false);
         } else {
-            osd.show("󰤨", "BLUETOOTH // " + Bluetooth.device, 1, false);
+            osd.show("󰂯", "BLUETOOTH // " + Bluetooth.device, 1, false);
         }
     }
 }

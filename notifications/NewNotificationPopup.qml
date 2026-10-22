@@ -43,7 +43,8 @@ Scope {
         implicitWidth: notifiCol.width
         implicitHeight: notifiCol.implicitHeight + 20
 
-        color: Qt.alpha(root.accent1, 0.05)
+        //color: Qt.alpha(root.accent1, 0.05)
+        color: "transparent"
 
         WlrLayershell.layer: WlrLayer.Overlay
         WlrLayershell.keyboardFocus: WlrKeyboardFocus.None
@@ -55,8 +56,8 @@ Scope {
             id: notifiCol
             anchors.top: parent.top
             anchors.left: parent.left
+            anchors.right: parent.right
             width: 400
-            anchors.margins: 10
             spacing: 20
 
             Repeater {
@@ -107,6 +108,7 @@ Scope {
                         Text {
                             Layout.fillWidth: true
                             text: "connection 131.321.5."
+                            font.pixelSize: 12
                             color: root.accent1
                         }
 
@@ -157,18 +159,102 @@ Scope {
                                         Layout.alignment: Qt.AlignVCenter
                                         text: notifCard.modelData.appName || "Notication"
                                         color: root.accent1
+                                        font.capitalization: Font.AllUppercase
+                                        font.bold: true
+                                        font.pixelSize: 18
                                     }
                                 }
 
                                 // body
-                                Text {
+                                Item {
                                     Layout.fillWidth: true
-                                    // no fillHeight: height follows the content
-                                    text: notifCard.modelData.summary
-                                    wrapMode: Text.WordWrap
-                                    maximumLineCount: 4
-                                    elide: Text.ElideRight
-                                    color: root.accent2
+                                    implicitHeight: notifText.implicitHeight + 10   // 5px margin top + bottom
+
+                                    Rectangle {
+                                        anchors.fill: parent
+                                        color: Qt.alpha(root.accent2, 0.4)
+                                        border.color: root.accent2
+                                        border.width: 2
+                                    }
+
+                                    ColumnLayout {
+                                        id: notifText
+                                        anchors {
+                                            left: parent.left
+                                            right: parent.right
+                                            top: parent.top
+                                            margins: 5
+                                        }
+
+                                        Text {
+                                            Layout.fillWidth: true
+                                            text: notifCard.modelData.summary || "summary"
+                                            wrapMode: Text.Wrap
+                                            maximumLineCount: 4
+                                            elide: Text.ElideRight
+                                            color: root.accent2
+                                        }
+                                        Text {
+                                            Layout.fillWidth: true
+                                            text: notifCard.modelData.body || "body"
+                                            wrapMode: Text.WordWrap
+                                            maximumLineCount: 4
+                                            elide: Text.ElideRight
+                                            color: root.accent2
+                                        }
+                                    }
+                                }
+                                RowLayout {
+                                    Layout.alignment: Qt.AlignRight
+                                    Layout.fillWidth: true
+                                    visible: notifCard.modelData.actions.length > 0
+                                    Repeater {
+                                        model: notifCard.modelData.actions
+
+                                        Item {
+                                            id: actionBtn
+                                            required property var modelData
+
+                                            implicitWidth: content.implicitWidth + 20
+                                            implicitHeight: 26
+
+                                            Accessible.role: Accessible.Button
+                                            Accessible.name: actionBtn.modelData.text || ""
+
+                                            RowLayout {
+                                                id: content
+                                                anchors.centerIn: parent
+                                                spacing: 6
+
+                                                Text {
+                                                    text: actionBtn.modelData.text || ""
+                                                    color: root.accent1
+                                                }
+
+                                                Rectangle {
+                                                    Layout.preferredWidth: 12
+                                                    Layout.preferredHeight: 12
+                                                    color: "transparent"
+                                                    border.color: root.accent2
+                                                    border.width: 1
+
+                                                    Text {
+                                                        anchors.centerIn: parent
+                                                        text: "X"
+                                                        color: root.accent2
+                                                        font.pixelSize: 9
+                                                    }
+                                                }
+                                            }
+
+                                            MouseArea {
+                                                anchors.fill: parent
+                                                hoverEnabled: true
+                                                cursorShape: Qt.PointingHandCursor
+                                                onClicked: notifCard.modelData.invokeAction(actionBtn.modelData.identifier)
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
