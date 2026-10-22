@@ -71,3 +71,10 @@ exemples was for when I was laerning
 
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("qs ipc call launcher toggle"))  
 hl.bind("SUPER + M", hl.dsp.exec_cmd("qs ipc call mediapanel toggle"))  
+
+---
+
+### Thanks  
+
+[doannc22212 quickshell-config](https://github.com/doannc2212/quickshell-config)  
+learned how to make some of the components

@@ -3,6 +3,7 @@ import QtQuick // for Text
 import "./stats"
 import "./launcher"
 import "./mediaplayer"
+import "./notifications"
 import "./osd"
 
 ShellRoot {
@@ -10,5 +11,6 @@ ShellRoot {
     Bar {}
     Launcher {}
     MediaPanel {}
-    AudioOsd {}
+    Osd {}
+    NewNotificationPopup {}
 }
