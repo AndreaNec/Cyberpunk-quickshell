@@ -5,6 +5,7 @@ import "./launcher"
 import "./mediaplayer"
 import "./notifications"
 import "./osd"
+import "./settings"
 
 ShellRoot {
     StatsHud {}
@@ -13,4 +14,5 @@ ShellRoot {
     MediaPanel {}
     Osd {}
     NewNotificationPopup {}
+    SettingsPanel {}
 }

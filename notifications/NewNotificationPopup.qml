@@ -33,7 +33,7 @@ Scope {
         }
         margins {
             left: 20
-            top: 20
+            top: 0
         }
 
         visible: NotificationService.notifications.length > 0
@@ -172,7 +172,7 @@ Scope {
 
                                     Rectangle {
                                         anchors.fill: parent
-                                        color: Qt.alpha(root.accent2, 0.4)
+                                        color: Qt.alpha(root.accent2, 0.6)
                                         border.color: root.accent2
                                         border.width: 2
                                     }

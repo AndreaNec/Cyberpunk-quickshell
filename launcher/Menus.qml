@@ -120,6 +120,13 @@ Singleton {
                         glyph: "\udb81\udf5a",
                         comment: "open Radioport",
                         run: sh("qs ipc call mediapanel open")
+                    },
+                    {
+                        id: "settings",
+                        name: "Settings",
+                        glyph: "\uf013",
+                        comment: "open settings",
+                        run: sh("qs ipc call settings toggle")
                     }
                 ]
         })
