@@ -27,6 +27,8 @@ working bt sub menu
 working media player display  
 ram that shows workspaces  
 working volume osd  
+working notifications  
+working wallpaper settings  
 
 ---
 
@@ -64,6 +66,10 @@ refactoring into smaller components especialy mediaplayer
 refactoring of a lot of the values (like widths and heights) from hardcoded to variables in singletons or in the roots  
 adding features (rn Idk which, probably some bar widgets)  
 exemples was for when I was laerning  
+Creating new icons and adding existing ones in the code
+Adding animations
+Polish UI
+Polish Keyboard navigation
 
 ---
 
