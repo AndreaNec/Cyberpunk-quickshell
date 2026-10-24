@@ -75,6 +75,16 @@ Singleton {
         }
     ]
 
+    //-------------Style----------------
+    readonly property var style: [
+        {
+            id: "style:wallpaper",
+            name: "Wallpaper",
+            glyph: "\udb80\ude4f",
+            run: sh("qs ipc call wallpapers toggle")
+        }
+    ]
+
     // ---------- Bluetooth ----------
     readonly property var bluetooth: Bluetooth.bluetooth
 
@@ -120,6 +130,13 @@ Singleton {
                         glyph: "\udb81\udf5a",
                         comment: "open Radioport",
                         run: sh("qs ipc call mediapanel open")
+                    },
+                    {
+                        id: "style",
+                        name: "Style",
+                        glyph: "\uf0d0",
+                        comment: "style settings",
+                        children: () => root.style
                     },
                     {
                         id: "settings",

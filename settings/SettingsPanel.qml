@@ -63,14 +63,14 @@ Scope {
             right: true
         }
         exclusionMode: ExclusionMode.Ignore
-        WlrLayershell.namespace: "launcher"
+        WlrLayershell.namespace: "quickshell:settings"
         WlrLayershell.layer: WlrLayer.Overlay
         WlrLayershell.keyboardFocus: WlrKeyboardFocus.Exclusive
 
         // Dim background, click anywhere outside the card to close
         Rectangle {
             anchors.fill: parent
-            color: "#cc000000"
+            color: Qt.alpha("#000000", 0.4)
             opacity: root.shown ? 1 : 0
             Behavior on opacity {
                 NumberAnimation {

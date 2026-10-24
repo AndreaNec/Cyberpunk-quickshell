@@ -16,6 +16,23 @@ This project aims to make a quickshell inspired to cyberpunk 2077 cybrdeck
 ### radioport
 
 ![radioport screenshot](./images/radioport.png)
+<table>
+  <tr>
+    <td><img src="./images/menu.png" width="300" alt="Image 1 Description"></td>
+    <td><img src="./images/desktop-bar.png" width="300" alt="Image 2 Description"></td>
+  </tr>
+  <tr>
+    <td><img src="./images/radioport.png" width="300" alt="Image 3 Description"></td>
+    <td><img src="./images/OSD.png" width="300" alt="Image 4 Description"></td>
+  </tr>
+  <tr>
+    <td><img src="./images/wallpaper.png" width="300" alt="Image 3 Description"></td>
+    <td><img src="./images/wallpaper2.png" width="300" alt="Image 4 Description"></td>
+  </tr>
+  <tr>
+    <td><img src="./images/notification.png" width="600" alt="Image 3 Description"></td>
+  </tr>
+</table>
 
 ---
 
@@ -73,10 +90,23 @@ Polish Keyboard navigation
 
 ---
 
-## Raccomended bindings for hyprland
+## Raccomended settings for hyprland
 
 hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("qs ipc call launcher toggle"))  
 hl.bind("SUPER + M", hl.dsp.exec_cmd("qs ipc call mediapanel toggle"))  
+
+--blur to quickshell  
+hl.layer_rule({  
+ name = "quickshellBlur",  
+ match = { namespace = "quickshell|quickshell:settings|quickshell:notifications" },  
+ blur = true,  
+ ignore_alpha = 0,  
+})  
+
+--volume  
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"))  
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))  
+hl.bind("XF86AudioMute",        hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))  
 
 ---
 

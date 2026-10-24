@@ -13,7 +13,7 @@ Item {
     property bool active: false
     signal clicked
 
-    Layout.preferredWidth: 250
+    Layout.preferredWidth: 300
     Layout.preferredHeight: 100
     clip: true
     Rectangle {
@@ -27,6 +27,8 @@ Item {
         RowLayout {
             anchors.fill: parent
             anchors.margins: 10
+            anchors.leftMargin: 20
+            anchors.rightMargin: 20
             Layout.alignment: Qt.AlignCenter
             spacing: 20
 
@@ -37,7 +39,7 @@ Item {
 
                 Image {
                     anchors.fill: parent
-                    source: "../images/icons/notificationicon.png"
+                    source: "../images/icons/SettingsIcon.png"
                 }
             }
             CybrShape {
@@ -47,7 +49,9 @@ Item {
                 cut: 6
                 fillColor: Qt.alpha(root.accent2, 0.15)
                 Text {
-                    anchors.centerIn: parent
+                    anchors.left: parent.left
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.leftMargin: 10
                     text: root.name
                     color: root.accent2
                 }

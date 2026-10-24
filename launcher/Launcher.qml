@@ -121,7 +121,7 @@ Scope {
             right: true
         }
         exclusionMode: ExclusionMode.Ignore
-        WlrLayershell.namespace: "launcher"
+        WlrLayershell.namespace: "quickshell:launcher"
         WlrLayershell.layer: WlrLayer.Overlay
         WlrLayershell.keyboardFocus: WlrKeyboardFocus.Exclusive
 

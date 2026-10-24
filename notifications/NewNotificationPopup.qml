@@ -48,7 +48,7 @@ Scope {
 
         WlrLayershell.layer: WlrLayer.Overlay
         WlrLayershell.keyboardFocus: WlrKeyboardFocus.None
-        WlrLayershell.namespace: "quickshell-notifications"
+        WlrLayershell.namespace: "quickshell:notifications"
 
         exclusionMode: ExclusionMode.Ignore
 
@@ -126,7 +126,7 @@ Scope {
                                 Image {
                                     anchors.fill: parent
                                     anchors.margins: 5
-                                    source: "../images/icons/notificationicon.png"
+                                    source: "../images/icons/notificationicon2.png"
                                 }
                             }
 
@@ -172,7 +172,7 @@ Scope {
 
                                     Rectangle {
                                         anchors.fill: parent
-                                        color: Qt.alpha(root.accent2, 0.6)
+                                        color: Qt.alpha(root.accent2, 0.2)
                                         border.color: root.accent2
                                         border.width: 2
                                     }
@@ -188,7 +188,8 @@ Scope {
 
                                         Text {
                                             Layout.fillWidth: true
-                                            text: notifCard.modelData.summary || "summary"
+                                            Layout.margins: 10
+                                            text: notifCard.modelData.summary
                                             wrapMode: Text.Wrap
                                             maximumLineCount: 4
                                             elide: Text.ElideRight
@@ -196,7 +197,8 @@ Scope {
                                         }
                                         Text {
                                             Layout.fillWidth: true
-                                            text: notifCard.modelData.body || "body"
+                                            visible: notifCard.modelData.body
+                                            text: notifCard.modelData.body
                                             wrapMode: Text.WordWrap
                                             maximumLineCount: 4
                                             elide: Text.ElideRight

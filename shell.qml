@@ -6,6 +6,7 @@ import "./mediaplayer"
 import "./notifications"
 import "./osd"
 import "./settings"
+import "./wallpapers"
 
 ShellRoot {
     StatsHud {}
@@ -15,4 +16,5 @@ ShellRoot {
     Osd {}
     NewNotificationPopup {}
     SettingsPanel {}
+    WallpaperGrid {}
 }

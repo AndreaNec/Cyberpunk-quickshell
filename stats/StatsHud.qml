@@ -8,6 +8,7 @@ import QtQuick.Layouts
 PanelWindow {
     exclusionMode: ExclusionMode.Ignore
     WlrLayershell.layer: WlrLayer.Top
+    WlrLayershell.namespace: "quickshell:stats"
 
     mask: Region {}
 
