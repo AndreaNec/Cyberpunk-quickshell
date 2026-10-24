@@ -34,7 +34,13 @@ working media player display
 ram that shows workspaces  
 working volume osd  
 working notifications  
-working wallpaper settings  
+working wallpaper settings (awww backend)  
+
+---
+
+## dependencies
+
+awww (as backend for the wallpapers)
 
 ---
 
@@ -44,6 +50,10 @@ working wallpaper settings
 ./launcher, contains all the launcher related stuff  
 ./mediaplayer, contains all the mediaplayer related stuff  
 ./stats, contains all the components for the ram overlay  
+./images, contains the images for the Readme and the "icons"  
+./settings, inspired by cyberpunk 2077 pcs, contains only wallpaper settings, might host others in the feature  
+./wallpapers, standalone wallpaper settings because I don't know which to choose
+./osd, osd files
 ./:  
  Theme.qml is a singleton that contains the theme colors and global sizes for cohesion  
  CybrShape.qml is a component used to recreate the classic cyberpunk shape, to be used instead of rectangles  
@@ -68,10 +78,10 @@ the lsp by default doesn't work you have to create a .qmlls.ini file in this fol
 
 ### To do
 
-refactoring into smaller components especialy mediaplayer  
+refactoring into smaller components  
 refactoring of a lot of the values (like widths and heights) from hardcoded to variables in singletons or in the roots  
 adding features (rn Idk which, probably some bar widgets)  
-exemples was for when I was laerning  
+exemples was for when I was learning  
 Creating new icons and adding existing ones in the code
 Adding animations
 Polish UI
