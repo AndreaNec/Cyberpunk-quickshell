@@ -5,17 +5,6 @@
 
 This project aims to make a quickshell inspired to cyberpunk 2077 cybrdeck
 
-### Top Bar
-
-![bar screenshot](./images/desktop-bar.png)
-
-### Menu
-
-![menu screenshot](./images/menu.png)
-
-### radioport
-
-![radioport screenshot](./images/radioport.png)
 <table>
   <tr>
     <td><img src="./images/menu.png" width="300" alt="Image 1 Description"></td>
@@ -30,7 +19,7 @@ This project aims to make a quickshell inspired to cyberpunk 2077 cybrdeck
     <td><img src="./images/wallpaper2.png" width="300" alt="Image 4 Description"></td>
   </tr>
   <tr>
-    <td><img src="./images/notification.png" width="600" alt="Image 3 Description"></td>
+    <td><img src="./images/notification.png" width="300" alt="Image 3 Description"></td>
   </tr>
 </table>
 
