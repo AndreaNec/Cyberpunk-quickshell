@@ -33,7 +33,7 @@ Scope {
         }
         margins {
             left: 20
-            top: 0
+            top: 80
         }
 
         visible: NotificationService.notifications.length > 0

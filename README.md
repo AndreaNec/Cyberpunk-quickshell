@@ -86,6 +86,7 @@ Creating new icons and adding existing ones in the code
 Adding animations
 Polish UI
 Polish Keyboard navigation
+theme switcher
 
 ---
 
